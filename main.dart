@@ -1,224 +1,171 @@
 void main() {
-  //variable and printing method
-  //this is usd for printing
-  print("hello noor");
-//now next thing variable
-  var noor = "Noor Fatima";
-  print(noor);
-  var n = 4;
-  print(n);
-  //var does'nt need to specify specific data type
-  //but for good practice we need to specify it individually.
-  //declaration of data types individually
+//now we will discuss list
+// basically list is the form of array
+// what is in an array and why  we need an array
+// basically we use an array or list when we need or when we want ko declare multiple
+//values in a single variable so that we can use it simply
+// it is denoted by 'list' basically list is the key work which is used to initiallize or declare list
 
-  //integer
+  var lis1 = ['noor', 1, 0.5, 'alpha'];
+  //in order to print
+  print(lis1);
 
-  int a = 5;
-  print(a);
-  //it will be printed 5
-  // if i need to add integer number into another integer so what would i do is that i just add them both
-//so here
-  int e = 5;
-  int b = 6;
-  int z = e + b;
-  print(z);
-  //in the same case if i changed the value of  integer into float it will shows an erorr
-  // now for decimal values we take double
-  double alpha = 4.5;
-  print(alpha);
-//in the same case i can perform operations on it
-  double bet = 4.5;
-  double alph = 8.10;
-  double gamm = alph / bet;
-  print(gamm);
-  //in the same way we can perform addition subtraction and multiplicattion and division as well
-  //if we need to use integer and decimal both values at a time then we will use num data so here the example
-  num alp = 2.5;
-  num be = 5;
-  print(alp);
-  print(be);
-//now we will learn modulo operator
-//this shows remainder
+//when we need to update list
+  var list2 = ['alpha', 'beta', 'gamma', 1, 2, 3, -1, 0.5];
+  list2[6] = 'null';
+  print(list2);
 
-  num f = 5;
-  num g = 50;
-  num h = f % g;
-  print(h);
+  //now we will discuss some basic features of list
 
-  num i = 5;
-  num j = 50;
-  num k = j % i;
-  print(k);
+  var list3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'noor', 'fatima', 'abcd'];
+  print(list3.length);
+  // //it shows the whole number of elements which is present inside of list
 
-  num m = 28;
-  num mm = 98;
-  num o = m % mm;
-  print(o);
+//now we will discuss
+  var list = [0, 0.1, 0.2, 0.3, 0.4];
+  var a = list.first;
+  var b = list.elementAt(1);
+  var c = list.elementAt(2);
+  var d = list.elementAt(3);
+  var e = list.last;
+  var f = list.length;
+  print('there are $f elements present inside a list');
+  print('the first element inside list is $a');
+   print('the second element inside list is $b');
+   print('the third element inside list is $c');
+print('the fourth element inside list is $d');
+print('the fifth element inside list is $e');
 
-  //if we want to get integer result from decimal terms than we will use ~/ operator for that
-
-  num al = 88.5;
-  num bta = 67.8989898989;
-  num gmma = al ~/ bta;
-  print(gmma);
-
-//now we will start pre and post increment and as well as decrement operator
-//pre increment it will include +1 in start and then shows the result
+//now we will discuss updatng list there are two ways to update a list
+// here it is
+//first verify the index number which you really want to update
 //for example
 
-  int x = 5; // value of a is initially equivalent to 5
-  int y = ++x + x - --x + --x + ++x + x;
-  //y is assigned to  6  + 6 -  5  +  4  +  5  + 5 output should be equivalent to 21
-  print(y);
+  var list4 = ['alpha', 'numeric', 'data', 11, 0.5, -0.1, 555];
+  list4[5] = 0.0001;
+  print(list4);
 
-// now post increment and decrement
-  int ai = 11; // initially ai is equivalent to 11
-  int ba = ai-- + ai++ - ai + ai - ai-- + ai++;
-  //now ba is assigned to  11 +  10 - 11 + 11 - 11 + 10 answer should be 20
-  print(ba);
+  // second method is replace it with range that means update multiple variables or multiple values at a time
+  var list5 = [0, 1, 'two', 'three', 4, 5];
+  list5.replaceRange(4, 6, ['four', 'five']);
+  print(list5);
+  // we just need to to take the last range value which is +1 from the index that we need to change
 
-  //now increment and decrement of pre and post both
+//now we will discuss the method of sorting
+  var list6 = [-0.1, -0.2, 0.1, 0.2, 0, 8, 6, 45, 87, 79, 0.0001];
+  list6.sort();
+  print(list6);
 
-  int ae = 25; // intially ae is equivalent to 25
-  int eb = ++ae + ae-- - ae + --ae - ae-- + ++ae - ae++;
-  //now eb is assigned to   26 + 26  - 25 + 24 - 24  + 24  -24 the output must be equivalent to = 27
-  print(eb);
+//in the same way we can sort the list of strings
+//the main condition of sorting is that all the elements present inside the list must have same data type
+// so that we can easily sort them
 
-  //now we will discuss equality relational operators
-  // > and < greater than and less than operator
+  var list7 = [
+    'apple',
+    'orange',
+    'banana',
+    'custard apple',
+    'fruit',
+    'eggplant',
+    'grapes',
+    'kiwi',
+    'lemon'
+  ];
+  list7.sort();
+  print(list7);
+  // // it can be sort with the help of initial character
 
-  int ia = 5;
-  int bi = 9;
-  bool ic = ia > bi; //boolean is used to identify the true and false condition
-  // here ic= 5>9 so 5 is not greater than 9 condition is false
-  print(ic);
+//now we will discuss is empty and isnotempty method
+//firstly we will discuss isempty method
 
-  int ax = 5;
-  int bx = 9;
-  bool cx = ax < bx; //boolean is used to identify the true and false condition
-  // here cx= 5<9 so 5 is  less than 9 condition is true
-  print(cx);
-
-  //now less than equal to and  greater than equal to which can be denoted as <= & >=
-  // //for less than
-  int xa = 6;
-  int xb = 9;
-  bool xc = xa <= xb;
-  // xc= 6<= 9 means 6 is less than equal to 9 condition should be TRUE
-  print(xc);
-
-//for greater than
-  int aj = 6;
-  int bj = 9;
-  bool cj = aj >= bj;
-  // cj= 6>= 9 means 6 is greater than equal to 9 condition should be False
-  print(cj);
-
-//now equality operator which is denoted by == (double assignment operator)
-
-  int az = 7;
-  int bz = 8;
-  bool cz = az == bz;
-  // cz= 7==8 that means 7 is equivalent to 8 which is false obviously
-  print(cz);
-
-  //now != not equal to operator
-  int ay = 5;
-  int by = 5;
-  bool cy = ay != by;
-  // in this case c= 5!=5 that means 5 is not equal to 5 so this is FALSE
-  print(cy);
-//another example
-
-  int at = 5;
-  int bt = 10;
-  bool ct = at != bt;
-  // in this case c= 5!=10 that means 5 is not equal to 10 so this is TRUE
-  print(ct);
-
-//now logical operators
-// firstly we will discuss && operator in such type of operator both cases must have to be satisfied then the
-// block of code executes and return true value otherwise no
-// // here is the example of true statement
-  int av = 7;
-  int bv = 9;
-  bool cv = av < bv && bv > av;
-  // cv= 7<9 && 9>7 that means 7 is less than 9 and as well as 9 is greater than 7 so both conditions are satisfied
-  // answer should be true
-  print(cv);
-
-// here is the example of false statement
-  int an = 7;
-  int bn = 9;
-  bool cn = an < bn && bn < an;
-  // cn= 7<9 && 9<7 that means 7 is less than 9 and as well as 9 is less than 7 so both conditions are not satisfied
-  // answer should be false
-  print(cn);
-
-//now we will discuss or statement it can be denoted as || in such type of condition any one case must have
-// to be satisfied that means it must have to be TRUE so that i can be executed
-//here are two examples for one and both conditions are true
-// firstly  for both conditions are true
-
-// // here is the example of true statement
-  int ad = 7;
-  int bd = 9;
-  bool cd = ad < bd || bd >= ad;
-  // cd= 7<9 || 9>=7 that means 7 is less than 9 and as well as 9 is greater than equal to 7 so both conditions are satisfied
-  // answer should be true
-  print(cd);
-
-// here is the example of true statement
-  int ag = 7;
-  int bg = 9;
-  bool cg = ag < bg || bg < ag;
-  // cg= 7<9 || 9<7 that means 7 is less than 9 and as well as 9 is lessthan 7 so both conditions are not satisfied
-  // answer should be true because we need that 1 condition must have to be satisfied
-  print(cg);
-
-  //now the last relational and equality operator that is called NOT which can be denoted as "!"
-  //the main purpose of this operator is to convert the true condition into false condition and false condition into true condition
-  // as well here is the example of such operator
-
-  int ar = 5;
-  int br = 10;
-  bool cr = !(ar < br);
-  // c= !(5 <10) that means 5 is less than 10 that should be true but the whole bracket contains "!" NOT operator
-  // it turns the true condition into false condition so answer should be FALSE
-  print(cr);
-  int ap = 5;
-  int bp = 10;
-  bool cp = !(ap > bp);
-  // c= !(5 >10) that means 5 is greater than 10 that should be false but the whole bracket contains "!" NOT operator
-  // it turns the false condition into true condition so answer should be TRUE
-  print(cp);
-
-// now we will discuss conditional statements that means if condition, if ,else condition, if,  else if, else condition
-//firstly we will discuss if condition only
-  int ao = 5;
-  int bo = 9;
-  if (ao < bo) {
-    print('a is less than b');
+  var list8 = [];
+  if (list8.isEmpty) {
+    print('the list is empty');
   }
-  int oa = 5;
-  int ob = 9;
-  if (oa > ob) {
-    print('a is greater than b');
+//if we want to add elements in the list then we use this method
+  list8.add(0.5);
+  list8.add(0);
+  list8.add(9);
+  print(list8);
+  if (list8.isNotEmpty) {
+    print('the list have some values and it is not empty');
   }
-  //this would not be executed because the condition is not true
-
-  //now we will discuss three conditional statements
-  //these are if , else if, else
-
-  int as = 5;
-  int bs = 9;
-  if (as > bs) {
-    print('a is greater than b');
-  } else if (as == bs) {
-    print(' a is equal to b');
-  } else if (as >= bs) {
-    print('a is greater than equal to b');
-  } else {
-    print('a is less than b'); //this block will be executed
+// //now if we want to make list empty we can simply use clear function for that purpose
+  list8.clear();
+  if (list8.isEmpty) {
+    print('this has been cleared');
   }
+
+//now we willl discuss reversed method
+//for that we just simply use reversed keyword or function'
+//this method is used when we actually want to reversed the whole list
+  var list9 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  print(list9.reversed);
+//the anoother method of declaration of such process is that
+  var list10 = [0.5, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var reversed = List.of(list10.reversed);
+  print(reversed);
+
+  //both methods are same we can do this or we can do that directly like
+  var list11 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  print(list11.reversed);
+
+  //now we will discuss add method
+
+//there are various methods for adding value into the list
+//these are .add method it is used when we want to add single value at the end of the list
+// secod one is add all method it is used when we want to add multiple values at the end of the list
+//the last one is .insertALL this one is usedd when we want to add a value in list in a particular index number
+// doing all of these one by one
+  var list12 = [1, 2, 3];
+  list12.add(5);
+  print(list12);
+  //this adds only one value at the end of the list
+  //now we will use .addAll method
+  list12.addAll([8, 9, 11]);
+  print(list12);
+  //now we will use .insertAll
+
+  list12.insertAll(0, [000, 6, 7, 99]);
+  print(list12);
+  //so basically these all are three methods which is used over here
+
+  //now we will discuss remove methods
+//so we will use .remove, remove at for particular index, remove last as well
+// so here is the example
+
+  var list13 = [00, 0, 1, 2, 3, 4, 5, 6, 7];
+  print(list13);
+
+  list13.remove(00);
+  print(list13);
+  list13.removeLast();
+  print(list13);
+
+  list13.removeAt(3);
+  print(list13);
+
+  list13.removeAt(list13.length - 1);
+  print(list13);
+
+  list13.clear();
+  print(list13);
+
+  var list14 = [000, 00, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0, 1, 2, 3, 4, 5, 6];
+  print(list14.length);
+  print(list14);
+
+//   //now
+  list14.removeWhere((e) => e < 0);
+  print(list14);
+  //we can remove whole range from it
+  list14.removeRange(1, 4);
+  print(list14);
+//if we want to retain list till specific value so we can do it through this
+  list14.retainWhere((e) => e > 2);
+  print(list14);
+
+
+
 }
